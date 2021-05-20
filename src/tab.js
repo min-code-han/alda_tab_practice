@@ -98,7 +98,7 @@ export default function NavTabs() {
           title='신용 올리기'
           sub1='클릭 한 번으로'
           sub2='하루 만에 신용점수 올리기'
-          notice='true'
+          noticeIco='true'
         />
       </TabPanel>
       <TabPanel value={value} index={1}>
@@ -107,7 +107,7 @@ export default function NavTabs() {
           title='대출 이자 줄이기'
           sub1='매일 부담스러운 대출이자'
           sub2='금리인하요구권으로 줄일수 있어요'
-          notice='false'
+          noticeIco='false'
         />
       </TabPanel>
       <TabPanel value={value} index={2}>
@@ -116,7 +116,7 @@ export default function NavTabs() {
           title='맞춤 대출 찾기'
           sub1='내 대풀금리가 가장 맞은 곳은?'
           sub2=''
-          notice='false'
+          noticeIco='false'
         />
       </TabPanel>
     </div>
