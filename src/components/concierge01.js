@@ -26,6 +26,7 @@ const useStyles = makeStyles({
 });
 
 const cards = [1, 2, 3, 4];
+const list = [1, 2, 3, 4, 5, 6];
 
 const Concierge01 = () => {
   const classes = useStyles();
@@ -36,21 +37,18 @@ const Concierge01 = () => {
         <Card className={classes.root} key={cards}>
           <CardContent>
             <Typography className={classes.title}>요금 납부내역</Typography>
-            <Typography className={classes.pos} color='textSecondary'>
-              1분만에 제출하기
-            </Typography>
+            <Typography className={classes.pos}>1분만에 제출하기</Typography>
           </CardContent>
           <i className='fas fa-arrow-right' />
         </Card>
       ))}
       <Notice>❗️ 참고해주세요</Notice>
       <Content>
-        <li>기타 부정적 요인으로 점수가 오르지 않을 수 있습니다.</li>
-        <li>기타 부정적 요인으로 점수가 오르지 않을 수 있습니다.</li>
-        <li>기타 부정적 요인으로 점수가 오르지 않을 수 있습니다.</li>
-        <li>기타 부정적 요인으로 점수가 오르지 않을 수 있습니다.</li>
-        <li>기타 부정적 요인으로 점수가 오르지 않을 수 있습니다.</li>
-        <li>기타 부정적 요인으로 점수가 오르지 않을 수 있습니다.</li>
+        {list.map((idx) => (
+          <li key={idx}>
+            기타 부정적 요인으로 점수가 오르지 않을 수 있습니다.
+          </li>
+        ))}
       </Content>
     </>
   );
