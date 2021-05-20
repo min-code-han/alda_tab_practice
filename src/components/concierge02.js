@@ -18,12 +18,6 @@ const useStyles = makeStyles({
     fontSize: 14,
     color: "#bdbdbd",
   },
-  arrow: {
-    position: "absolute",
-    right: 0,
-    top: "50%",
-    transform: "traslate(-50%,-50%)",
-  },
   post: {
     color: "#5ec15e",
   },

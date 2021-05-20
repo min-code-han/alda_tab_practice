@@ -17,12 +17,6 @@ const useStyles = makeStyles({
     fontSize: 14,
     color: "#bdbdbd",
   },
-  arrow: {
-    position: "absolute",
-    right: 0,
-    top: "50%",
-    transform: "traslate(-50%,-50%)",
-  },
 });
 
 const cards = [1, 2, 3, 4];
@@ -62,5 +56,5 @@ const Notice = styled.p`
 
 const Content = styled.ul`
   font-size: 12px;
-  color: #bdbdbd;
+  color: gray;
 `;
