@@ -1,11 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+import Content from './content'
+
+import useStyles from './style/tabStyle'
+
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -19,7 +22,7 @@ function TabPanel(props) {
       {...other}
     >
       {value === index && (
-        <Box p={3}>
+        <Box >
           <Typography>{children}</Typography>
         </Box>
       )}
@@ -52,12 +55,7 @@ function LinkTab(props) {
   );
 }
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-    backgroundColor: theme.palette.background.paper,
-  },
-}));
+
 
 export default function NavTabs() {
   const classes = useStyles();
@@ -69,26 +67,27 @@ export default function NavTabs() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" >
+      <AppBar position="static" className={classes.tabAppBar}>
         <Tabs
           variant="fullWidth"
           value={value}
           onChange={handleChange}
           aria-label="nav tabs example"
+          className={classes.indicator}
         >
-          <LinkTab label="신용 올리기" href="/drafts" {...a11yProps(0)} />
-          <LinkTab label="대출 이자 줄이기" href="/trash" {...a11yProps(1)} />
-          <LinkTab label="맞춤 대출 찾기" href="/spam" {...a11yProps(2)} />
+          <LinkTab label="신용 올리기" href="/drafts" {...a11yProps(0)} disableRipple/>
+          <LinkTab label="대출 이자 줄이기" href="/trash" {...a11yProps(1)} disableRipple/>
+          <LinkTab label="맞춤 대출 찾기" href="/spam" {...a11yProps(2)} disableRipple/>
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
-        Page One
+        <Content title="신용 올리기" sub1="클릭 한 번으로" sub2="하루 만에 신용점수 올리기"/>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Page Two
+        <Content title="대출 이자 줄이기" sub1="매일 부담스러운 대출이자" sub2="금리인하요구권으로 줄일수 있어요"/>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Page Three
+        <Content title="맞춤 대출 찾기" sub1="내 대풀금리가 가장 맞은 곳은?" sub2=""/>
       </TabPanel>
     </div>
   );
