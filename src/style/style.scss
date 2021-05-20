@@ -16,3 +16,12 @@ span.MuiTab-wrapper{
   }
 }
 
+i.fa-arrow-right{
+  position: absolute;
+  right: 10px;
+  top:50%;
+  transform: translate(-50%,-50%);
+  font-size: 20px;
+ cursor: pointer;
+}
+
