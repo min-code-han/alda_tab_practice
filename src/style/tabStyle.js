@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
     background: "none",
     color: "black",
     boxShadow: "none",
+    fontSize: "20px",
   },
 }));
 

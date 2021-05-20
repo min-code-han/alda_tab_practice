@@ -1,0 +1,17 @@
+span.PrivateTabIndicator-colorSecondary-5{
+    background-color: black;
+  }
+.tab-information{
+    margin-left: 15px;
+    font-size: 19px;
+    color:gray;
+  }
+span.MuiTab-wrapper{
+  font-size: 15px;
+}
+@media (min-width: 600px){
+  a.MuiTab-root {
+    min-width: 60px; 
+  }
+}
+
