@@ -1,8 +1,9 @@
 import React from 'react';
+import AldaAI from './aldaAI'
 
 const App = () => {
   return(
-    <h1>Hello</h1>
+    <AldaAI />
   )
 };
 
