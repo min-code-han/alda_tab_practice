@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
@@ -57,10 +57,13 @@ function LinkTab(props) {
 export default function NavTabs() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
+  const [data, setData] = useState("initial data");
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
+  console.log(data);
 
   return (
     <div className={classes.root}>
@@ -99,6 +102,7 @@ export default function NavTabs() {
           sub1='클릭 한 번으로'
           sub2='하루 만에 신용점수 올리기'
           noticeIco='true'
+          setData={setData}
         />
       </TabPanel>
       <TabPanel value={value} index={1}>
@@ -108,6 +112,7 @@ export default function NavTabs() {
           sub1='매일 부담스러운 대출이자'
           sub2='금리인하요구권으로 줄일수 있어요'
           noticeIco='false'
+          setData={setData}
         />
       </TabPanel>
       <TabPanel value={value} index={2}>
@@ -117,6 +122,7 @@ export default function NavTabs() {
           sub1='내 대풀금리가 가장 맞은 곳은?'
           sub2=''
           noticeIco='false'
+          setData={setData}
         />
       </TabPanel>
     </div>

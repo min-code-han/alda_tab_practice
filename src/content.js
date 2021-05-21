@@ -18,11 +18,28 @@ const typosStyle = makeStyles((theme) => ({
 const Content = (props) => {
   const [popUp, setPopUp] = useState(false);
   const classes = typosStyle();
-  const { title, sub1, sub2, noticeIco, tab } = props;
+  const { title, sub1, sub2, noticeIco, tab, setData } = props;
   const hadlePopUp = () => {
     setPopUp(!popUp);
-    console.log(popUp);
   };
+
+  function handleBg() {
+    if (tab === "one") {
+      setData("yellow");
+      return;
+    }
+    if (tab === "two") {
+      setData("green");
+      return;
+    }
+
+    if (tab === "three") {
+      setData("blue");
+      return;
+    }
+  }
+  handleBg();
+
   return (
     <>
       <TxtWrap>
