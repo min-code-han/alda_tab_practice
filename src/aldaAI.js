@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import TabPanel from "./tab";
 import "./style/style.scss";
 
 const AldaAI = () => {
+  const [bgData, setBgData] = useState("initial data");
   return (
     <Wrap>
       <H1>
         ALDA 🎉 <i className='far fa-bell' />
       </H1>
-      <TabPanel />
+      <TabPanel setBgData={setBgData} />
     </Wrap>
   );
 };

@@ -6,7 +6,6 @@ import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import Content from "./content";
-
 import useStyles from "./style/tabStyle";
 
 function TabPanel(props) {
@@ -119,7 +118,7 @@ export default function NavTabs() {
         <Content
           tab='three'
           title='맞춤 대출 찾기'
-          sub1='내 대풀금리가 가장 맞은 곳은?'
+          sub1='내 대출금리가 가장 맞은 곳은?'
           sub2=''
           noticeIco='false'
           setData={setData}
