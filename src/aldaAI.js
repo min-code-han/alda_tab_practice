@@ -5,8 +5,9 @@ import "./style/style.scss";
 
 const AldaAI = () => {
   const [bgData, setBgData] = useState("initial data");
+  console.log(bgData);
   return (
-    <Wrap>
+    <Wrap style={{ backgroundColor: `${bgData}` }}>
       <H1>
         ALDA 🎉 <i className='far fa-bell' />
       </H1>
@@ -20,7 +21,6 @@ export default AldaAI;
 const Wrap = styled.div`
   padding: 0 25px 46px;
   width: 400px;
-  background-color: beige;
 `;
 
 const H1 = styled.h1`

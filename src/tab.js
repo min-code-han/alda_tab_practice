@@ -53,16 +53,17 @@ function LinkTab(props) {
   );
 }
 
-export default function NavTabs() {
+export default function NavTabs(props) {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
   const [data, setData] = useState("initial data");
+  const { setBgData } = props;
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
-  console.log(data);
+  setBgData(data);
 
   return (
     <div className={classes.root}>

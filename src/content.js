@@ -25,16 +25,16 @@ const Content = (props) => {
 
   function handleBg() {
     if (tab === "one") {
-      setData("yellow");
+      setData("#97e2ff");
       return;
     }
     if (tab === "two") {
-      setData("green");
+      setData("#ffe4e4");
       return;
     }
 
     if (tab === "three") {
-      setData("blue");
+      setData("#87f2f7");
       return;
     }
   }
