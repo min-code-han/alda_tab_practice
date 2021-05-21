@@ -5,7 +5,7 @@ import "./style/style.scss";
 
 const AldaAI = () => {
   const [bgData, setBgData] = useState("initial data");
-  console.log(bgData);
+
   return (
     <Wrap style={{ backgroundColor: `${bgData}` }}>
       <H1>
